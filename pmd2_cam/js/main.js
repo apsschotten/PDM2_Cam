@@ -12,10 +12,10 @@ if ('serviceWorker' in navigator) {
 
 var constraints = { video: { facingMode: "user" }, audio: false };
 
-const cameraView = document.querySelector("#camera-view"),
-    cameraOutput = document.querySelector("#camera-output"),
-    cameraSensor = document.querySelector("#camera-sensor"),
-    cameraTrigger = document.querySelector("#camera-trigger")
+const cameraView = document.querySelector("#camera--view"),
+    cameraOutput = document.querySelector("#camera--output"),
+    cameraSensor = document.querySelector("#camera--sensor"),
+    cameraTrigger = document.querySelector("#camera--trigger")
 
 function cameraStart() {
     navigator.mediaDevices
@@ -25,7 +25,7 @@ function cameraStart() {
             cameraView.srcObject = stream;
         })
         .catch(function (error) {
-            console.error("Ocorreu un Erro: ", error);
+            console.error("Ocorreu um Erro: ", error);
         });
 }
 
